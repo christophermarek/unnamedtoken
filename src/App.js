@@ -28,8 +28,8 @@ function App() {
             <StarfieldAnimation
                 style={{
                     position: 'absolute',
-                    width: '300%',
-                    height: '300%'
+                    width: '400%',
+                    height: '400%'
                 }}
             />
 
@@ -64,7 +64,7 @@ function App() {
 
                 <div className='rightMainPage'>
                     <div className='imageBox'>
-                        <img src={pic1} />
+                        <img src={pic1} alt='na' />
                     </div>
 
                     <div id='rightTextBlurb'>
@@ -81,7 +81,7 @@ function App() {
                 <div className='tokenomicsData'>
                     <div className='left'>
                         <div className='imageBox'>
-                            <img src={astronautAndRocket} />
+                            <img src={astronautAndRocket} alt='na' />
                         </div>
                     </div>
                     <div className='right'>
@@ -112,7 +112,7 @@ function App() {
 
                     <div className='right'>
                         <div className='imageBox'>
-                            <img src={alienAndUfo} />
+                            <img src={alienAndUfo} alt='na' />
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ function App() {
                     <div className='top'>
                         <div className='left'>
                             <div className='imageBox marginLeft2'>
-                                <img src={contract} />
+                                <img src={contract} alt='na' />
                             </div>
                         </div>
 
@@ -143,7 +143,7 @@ function App() {
                             <p className='font24'>Telegram</p>
                         </div>
                         <div className='imageBox marginLeft2'>
-                            <img src={satellite} />
+                            <img src={satellite} alt='na'/>
                         </div>
                     </div>
                 </div>
