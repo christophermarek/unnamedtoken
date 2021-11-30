@@ -28,8 +28,8 @@ function App() {
             <StarfieldAnimation
                 style={{
                     position: 'absolute',
-                    width: '400%',
-                    height: '400%'
+                    width: '325%',
+                    height: '325%'
                 }}
             />
 
@@ -102,11 +102,11 @@ function App() {
                     <p className='font32 font padding1'>How To Buy</p>
                 </div>
                 <div className='howToBuyData'>
-                    <div className='left'>
-                        <p>{tokenTicker}</p>
-                        <p>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
-                        <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-                        <p>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+                    <div className='left padding2'>
+                        <p className='font24'>{tokenTicker}</p>
+                        <p className='font18'>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
+                        <p className='font18'>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+                        <p className='font18'>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
                         <input type='button' value='Buy Now' class='purplebutton font24 font' />
                     </div>
 
@@ -136,21 +136,22 @@ function App() {
                             <input type='button' className='purplebutton font24 font' value='View Contract' />
                         </div>
                     </div>
-                    <div className='bottom'>
-                        <div>
-                            <p className='font24'>Twitter</p>
-                            <p className='font24'>Reddit</p>
-                            <p className='font24'>Telegram</p>
-                        </div>
-                        <div className='imageBox marginLeft2'>
-                            <img src={satellite} alt='na'/>
-                        </div>
-                    </div>
+
                 </div>
 
             </div>
-
-
+            <div className={'headerBar footer'}>
+                <div className='bottom'>
+                    <div>
+                        <p className='font24'>Twitter</p>
+                        <p className='font24'>Reddit</p>
+                        <p className='font24'>Telegram</p>
+                    </div>
+                    <div className='marginRight2'>
+                        <img src={satellite} alt='na' />
+                    </div>
+                </div>
+            </div>
 
         </div>
     )

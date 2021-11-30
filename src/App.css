@@ -9,6 +9,8 @@ body{
     background-position: center;  */
     color:white;
     font-family: 'Space Mono', monospace;
+    margin: 0;
+  padding: 0;
 }
 
 .font{
@@ -20,6 +22,7 @@ body{
     background-color: #310047;
     font-family: 'Space Mono', monospace;
     z-index: 1;
+    margin-top: -1%;
 }
 
 .imageBox{
@@ -122,12 +125,12 @@ div#rightTextBlurb {
 
 .bottom {
     display: flex;
-    width: 50%;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .marginLeft2{
     margin-left: 2%;
-    width: 30%;
 }
 
 .top{
@@ -138,4 +141,17 @@ div#rightTextBlurb {
 .projectInfoData{
     display: flex;
     flex-direction: column;
+}
+
+.footer{
+    padding: 1%;
+    
+}
+
+.padding2{
+    padding: 2%;
+}
+
+.marginRight2{
+    margin-right: 2%;
 }
