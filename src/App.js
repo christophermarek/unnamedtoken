@@ -5,6 +5,7 @@ import astronautAndRocket from './assets/astronautAndRocket.svg';
 import alienAndUfo from './assets/alienAndUfo.svg';
 import satellite from './assets/satellite.svg';
 import contract from './assets/contract.svg';
+import { motion } from "framer-motion";
 
 function App() {
 
@@ -33,18 +34,20 @@ function App() {
                 }}
             />
 
-            <div className={'headerBar'}>
-                <ul className='tokenNameandTicker'>
-                    <li class='name font32' >{tokenName}</li>
-                    <li class='ticker font22'>${tokenTicker}</li>
-                </ul>
+            <div className={'headerBar marginBottom1'}>
+                <div>
+                    <p className='name font32' >{tokenName}</p>
+                    <p className='ticker font24'>${tokenTicker}</p>
+                </div>
+
+
             </div>
             <div className='mainPage'>
                 <div className='leftMainPage'>
                     <div id='miniInfoBox'>
                         <ul className='tokenNameandTicker'>
-                            <li class='name font24'>{tokenName}</li>
-                            <li class='ticker font 18'>${tokenTicker}</li>
+                            <li className='name font24'>{tokenName}</li>
+                            <li className='ticker font 18'>${tokenTicker}</li>
                         </ul>
                     </div>
 
@@ -54,11 +57,26 @@ function App() {
                     </div>
 
                     <div id='buttonDiv'>
-                        <input type='button' class='purplebutton font24 font' value='Swap' />
-                        <input type='button' class='purplebutton font24 font' value='Tokenomics' />
-                        <input type='button' class='purplebutton font24 font' value='Roadmap' />
-                        <input type='button' class='purplebutton font24 font' value='Community' />
-                        <input type='button' class='purplebutton font24 font' value='Chart' />
+                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Tokenomics
+                        </motion.button>
+                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Swap
+                        </motion.button>
+                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Roadmap
+                        </motion.button>
+                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Community
+                        </motion.button>
+                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Chart
+                        </motion.button>
                     </div>
                 </div>
 
@@ -67,15 +85,15 @@ function App() {
                         <img src={pic1} alt='na' />
                     </div>
 
-                    <div id='rightTextBlurb'>
+                    {/* <div id='rightTextBlurb'>
                         <p>Hello this is just filler</p>
                         <p>filler text filler text</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
             <div className='TokenomicsPage'>
-                <div className={'headerBar'}>
+                <div className={'headerBar marginTop1 marginBottom1'}>
                     <p className='font32 font padding1'>Tokenomics</p>
                 </div>
                 <div className='tokenomicsData'>
@@ -91,14 +109,14 @@ function App() {
                         <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                         <p>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
 
-                        <input type='button' value='Buy Now' class='purplebutton font24 font' />
+                        <input type='button' value='Buy Now' className='purplebutton font24 font' />
                     </div>
                 </div>
 
             </div>
 
             <div className='HowToBuy'>
-                <div className={'headerBar'}>
+                <div className={'headerBar marginTop1 marginBottom1'}>
                     <p className='font32 font padding1'>How To Buy</p>
                 </div>
                 <div className='howToBuyData'>
@@ -107,7 +125,7 @@ function App() {
                         <p className='font18'>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
                         <p className='font18'>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                         <p className='font18'>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
-                        <input type='button' value='Buy Now' class='purplebutton font24 font' />
+                        <input type='button' value='Buy Now' className='purplebutton font24 font' />
                     </div>
 
                     <div className='right'>
@@ -119,7 +137,7 @@ function App() {
             </div>
 
             <div className='projectInfo'>
-                <div className={'headerBar'}>
+                <div className={'headerBar marginTop1 marginBottom1'}>
                     <p className='font32 font padding1'>Contract and Project Info</p>
                 </div>
                 <div className='projectInfoData'>
@@ -140,7 +158,7 @@ function App() {
                 </div>
 
             </div>
-            <div className={'headerBar footer'}>
+            <div className={'footer marginTop1'}>
                 <div className='bottom'>
                     <div>
                         <p className='font24'>Twitter</p>
