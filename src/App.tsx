@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 // @ts-ignore
 import StarfieldAnimation from 'react-starfield-animation'
 import pic1 from './assets/spaceAndRocket.svg';
@@ -20,11 +20,6 @@ function App() {
     /*
     */
 
-    //forgot to setup typescript lol
-    //probably when project is done i should,
-    //and also setup SCC to make reusing colors easier cause
-    //it is going to get annoying. 
-    //but i need a good setup for future projects like a blank template
     // need next.js to, that should be my default template for projects like this I am wasting a lot of time doing it mid project
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load

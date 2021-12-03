@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono");
 
+$purple5Rgb: rgba(49, 0, 71, 1);
+$purple3Rgb: rgba(102, 0, 148, 1);
+$purple2: #9614d0;
+
+$text_color: white;
+
+
 body {
     background-color: black;
     max-width: 100%;
     overflow-x: hidden;
-    /* background-image: url(https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2346&q=80);
-    background-size:     cover;                      
-    background-position: center;  */
-    color: white;
+    color: $text_color;
     font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 0;
@@ -17,10 +21,6 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
-
-
-
-
 .headerBar {
     width: 100%;
     font-family: 'Space Mono', monospace;
@@ -29,8 +29,8 @@ body {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    background: rgb(102, 0, 148);
-    background: radial-gradient(circle, rgba(102, 0, 148, 1) 0%, rgba(49, 0, 71, 1) 100%);
+    background: $purple3Rgb;
+    background: radial-gradient(circle, $purple3Rgb 0%, $purple5Rgb 100%);
 }
 
 .linkBtn{
@@ -38,7 +38,7 @@ body {
     position: relative;
     padding: 1%;
     margin: 5%;
-    color: white;
+    color: $text_color;
     text-decoration: none;
 }
 
@@ -83,7 +83,7 @@ img {
 }
 
 .purplebutton {
-    background-color: #9614d0;
+    background-color: $purple2;
     border: none;
     border-radius: 25px;
     width: 50%;
@@ -203,8 +203,8 @@ div#rightTextBlurb {
 .footer {
     padding: 1%;
     width: 100%;
-    background: rgb(102, 0, 148);
-    background: radial-gradient(circle, rgba(102, 0, 148, 1) 0%, rgba(49, 0, 71, 1) 100%);
+    background: $purple3Rgb;
+    background: radial-gradient(circle, $purple3Rgb 0%, $purple5Rgb 100%);
     font-family: 'Space Mono', monospace;
 }
 
