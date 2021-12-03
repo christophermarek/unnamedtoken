@@ -23,3 +23,7 @@ https://undraw.co/illustrations My favorite
 
 
 https://www.manypixels.co/gallery ok but its a mix of artists so its not a consistent style
+
+
+
+OK after site and contract is done, for marketing probably need to plan out a good moon shots post, moonshots telegram post, 4chan posts (how would i shill it there I am not sure)

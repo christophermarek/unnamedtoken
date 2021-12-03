@@ -17,6 +17,10 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
+
+
+
+
 .headerBar {
     width: 100%;
     font-family: 'Space Mono', monospace;
@@ -24,8 +28,48 @@ body {
     margin-top: -1%;
     display: flex;
     justify-content: space-around;
+    text-align: center;
     background: rgb(102, 0, 148);
     background: radial-gradient(circle, rgba(102, 0, 148, 1) 0%, rgba(49, 0, 71, 1) 100%);
+}
+
+.linkBtn{
+    z-index: 1;
+    position: relative;
+    padding: 1%;
+    margin: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.linkBtn:hover{
+    color: black;
+}
+
+.leftDiv{
+    width: 50%;
+}
+
+.rightDiv{
+    display: flex;
+    width: 50%;
+}
+
+img.icon {
+    width: 25%;
+    align-self: center;
+    margin: 5%;
+}
+
+.iconContainer {
+    display: flex;
+}
+
+.btnContainer{
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    width: 70%;
 }
 
 .imageBox {
@@ -122,12 +166,14 @@ div#rightTextBlurb {
 
 .left {
     width: 50%;
+    z-index: 1;
 }
 
 .right {
     width: 50%;
     text-align: center;
     padding: 1%;
+    z-index: 1;
 }
 
 .howToBuyData {
