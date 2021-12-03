@@ -1,4 +1,5 @@
 import './App.css';
+// @ts-ignore
 import StarfieldAnimation from 'react-starfield-animation'
 import pic1 from './assets/spaceAndRocket.svg';
 import astronautAndRocket from './assets/astronautAndRocket.svg';
@@ -10,7 +11,6 @@ import telegram from './assets/telegram.webp';
 import reddit from './assets/reddit.webp';
 
 import { motion } from "framer-motion";
-import { Simulate } from 'react-dom/test-utils';
 
 function App() {
 
@@ -25,6 +25,7 @@ function App() {
     //and also setup SCC to make reusing colors easier cause
     //it is going to get annoying. 
     //but i need a good setup for future projects like a blank template
+    // need next.js to, that should be my default template for projects like this I am wasting a lot of time doing it mid project
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
 
@@ -33,9 +34,11 @@ function App() {
 
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
-    NEXT step is to read infinity dot whitepaper to copy/write down their tokenomics to add to my page
-    And copy their how to buy page aswell 
-    -need site finished so i can go through smart contract properly
+    // NEXT step is to read infinity dot whitepaper to copy/write down their tokenomics to add to my page
+    // And copy their how to buy page aswell 
+    // -need site finished so i can go through smart contract properly
+
+    // mobile view is needed aswell.
     return (
         <div>
             <StarfieldAnimation
@@ -53,17 +56,17 @@ function App() {
 
                 </div>
                 <div className='rightDiv'>
-                    <div class='btnContainer'>
+                    <div className='btnContainer'>
 
-                        <a class='linkBtn' href="#tokenomics">Tokenomics</a>
-                        <a class='linkBtn' href="#buy">Buy</a>
-                        <a class='linkBtn' href="#projectinfo">Info</a>
-                        <a class='linkBtn' href="#">Rewards</a>
+                        <a className='linkBtn' href="#tokenomics">Tokenomics</a>
+                        <a className='linkBtn' href="#buy">Buy</a>
+                        <a className='linkBtn' href="#projectinfo">Info</a>
+                        <a className='linkBtn' href="#">Rewards</a>
 
                     </div>
 
-                    <div class='iconContainer'>
-                        <img className='icon' src={twitter} type="image/webp" alt='twitter'></img>
+                    <div className='iconContainer'>
+                        <img className='icon' src={twitter} alt='twitter'></img>
                         <img className='icon' src={telegram} alt='telegram'></img>
                         <img className='icon' src={reddit} alt='reddit'></img>
 
@@ -89,23 +92,23 @@ function App() {
                     </div>
 
                     <div id='buttonDiv'>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Tokenomics
                         </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Swap
                         </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Roadmap
                         </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Community
                         </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Chart
                         </motion.button>
@@ -165,7 +168,7 @@ function App() {
                         <p className='font18'>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
                         <p className='font18'>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
                         <p className='font18'>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
-                        <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Buy Now
                         </motion.button>
@@ -194,7 +197,7 @@ function App() {
                         <div className='right'>
                             <p className='font24'>Contract</p>
                             <p className='font18'>very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32</p>
-                            <motion.button className='purplebutton font24 font' onClick={true} whileHover={{ scale: 1.1 }}
+                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}>
                                 View Contract
                             </motion.button>
