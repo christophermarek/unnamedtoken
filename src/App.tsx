@@ -14,12 +14,6 @@ import { motion } from "framer-motion";
 
 function App() {
 
-    //BUTTON ANIMATIONS AND THINGS LIKE THAT ARE A MUST
-    //LOOK AT THE ANIMATION LIBRARY I USED BEFORE
-
-    /*
-    */
-
     // need next.js to, that should be my default template for projects like this I am wasting a lot of time doing it mid project
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
@@ -27,13 +21,34 @@ function App() {
     const tokenName = 'TOKEN NAME';
     const tokenTicker = 'TOKEN TICKER';
 
+    // FIVER MARKETING CAN pay 5$ for a marketing campaign from india or something lol
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
     // NEXT step is to read infinity dot whitepaper to copy/write down their tokenomics to add to my page
     // And copy their how to buy page aswell 
-    // -need site finished so i can go through smart contract properly
-
+    // -need site finished so i can go through smart contract properly'
+    //unvaxxed sperm has a nice page i can copy too
+    // copy their faq too.
+    // https://www.reddit.com/r/CryptoMoonShots/comments/rbfn9f/be_the_goat_get_rewarded_in_doge_shib_by_holding/
+    //this one has a contract we can look at aswell.
     // mobile view is needed aswell.
+
+    // REMOVE 12 month lock on liquidity pool. They say they have one in the whitepaper
+
+
+    const infoBox = [
+        ['Download & setup MetaMask or TrustWallet',
+            'Download MetaMask (a crypto wallet in the form of a browser extension) or TrustWallet (an app for your phone). After that, you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial). they include 3 hyperlinks on their page in this textbox'],
+        ['Buy and send BNB to Metamask or TrustWallet',
+            'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".'],
+        ['Head over to our Swap to buy InfinityDOT',
+            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. Set the slippage tolerance to 18% (sometimes it may be 20%, depending on how much demand there is).'],
+        ['View InfinityDOT and HODL',
+            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!'],
+        ['Add the Polkadot Token address to see your Rewards as they are delivered',
+            'The reward will be generated automatically, it is not necessary to add the Polkadot address to receive the reflection. Just add to see the amount of generated Polkadot. Token Address: 0x7083609fce4d1d8dc0c979aab8c869ea2c873402']
+    ]
+
     return (
         <div>
             <StarfieldAnimation
@@ -57,6 +72,8 @@ function App() {
                         <a className='linkBtn' href="#buy">Buy</a>
                         <a className='linkBtn' href="#projectinfo">Info</a>
                         <a className='linkBtn' href="#">Rewards</a>
+                        <a className='linkBtn' href="#">Chart</a>
+
 
                     </div>
 
@@ -160,9 +177,33 @@ function App() {
                 <div className='howToBuyData'>
                     <div className='left padding2'>
                         <p className='font24'>{tokenTicker}</p>
-                        <p className='font18'>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
-                        <p className='font18'>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-                        <p className='font18'>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+                        <div className='howtobuyContainerContainer'>
+                            {infoBox.map((entry, index) =>
+                                <div className='howtobuycontainer'>
+                                    {index % 2 === 0 ?
+                                        (
+                                            <>
+                                                <div className='buyBox' key={index}>
+                                                    <p className='font22'>{entry[0]}</p>
+                                                    <p className='font18'>{entry[1]}</p>
+                                                </div>
+                                                <div className='buyBox'></div>
+                                            </>
+                                        )
+                                        :
+                                        (
+                                            <>
+                                                <div className='buyBox'></div>
+                                                <div className='buyBox' key={index}>
+                                                    <p className='font22'>{entry[0]}</p>
+                                                    <p className='font18'>{entry[1]}</p>
+                                                </div>
+                                            </>
+                                        )
+                                    }
+                                </div>
+                            )}
+                        </div>
                         <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Buy Now

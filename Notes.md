@@ -12,6 +12,10 @@ Your 100 sold tokens ends up being 90.
 The remaining 10 tokens are then sold for BUSD which is then split among all holders.
 
 
+I CAN JUST LOOK ON CRYPTOMOONSHOTS TO SEE WHAT OTHER TOKENS DO FOR THEIR REFLECTIONS and compare the differences
+of the files, should be easy that way to understand.
+https://www.unvaxxedsperm.io/
+can copy their page too
 
 https://www.color-hex.com/color-palette/28652
 
