@@ -2,6 +2,7 @@ import './App.scss';
 // @ts-ignore
 import StarfieldAnimation from 'react-starfield-animation'
 import pic1 from './assets/spaceAndRocket.svg';
+import logo from './assets/logo.png';
 import astronautAndRocket from './assets/astronautAndRocket.svg';
 import alienAndUfo from './assets/alienAndUfo.svg';
 import satellite from './assets/satellite.svg';
@@ -18,24 +19,25 @@ function App() {
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
 
-    const tokenName = 'TOKEN NAME';
-    const tokenTicker = 'TOKEN TICKER';
+    const tokenName = 'Astral Pepe';
+    const tokenTicker = '$ELONMOON';
 
-    // FIVER MARKETING CAN pay 5$ for a marketing campaign from india or something lol
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
-    // NEXT step is to read infinity dot whitepaper to copy/write down their tokenomics to add to my page
-    // And copy their how to buy page aswell 
     // -need site finished so i can go through smart contract properly'
     //unvaxxed sperm has a nice page i can copy too
     // copy their faq too.
-    // https://www.reddit.com/r/CryptoMoonShots/comments/rbfn9f/be_the_goat_get_rewarded_in_doge_shib_by_holding/
-    //this one has a contract we can look at aswell.
+
     // mobile view is needed aswell.
 
-    // REMOVE 12 month lock on liquidity pool. They say they have one in the whitepaper
+    // REMOVE 12 month lock on liquidity pool. They say they have one in the whitepaper, i think i have to make the lp myself
+    // and attach the wallet
+
+    // when name picked need a site title
 
 
+    // USE CSS GRID WHERE I CAN SO I KNOW HOW TO DO IT
+    
     const infoBox = [
         ['Download & setup MetaMask or TrustWallet',
             'Download MetaMask (a crypto wallet in the form of a browser extension) or TrustWallet (an app for your phone). After that, you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial). they include 3 hyperlinks on their page in this textbox'],
@@ -44,10 +46,27 @@ function App() {
         ['Head over to our Swap to buy InfinityDOT',
             'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. Set the slippage tolerance to 18% (sometimes it may be 20%, depending on how much demand there is).'],
         ['View InfinityDOT and HODL',
-            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!'],
-        ['Add the Polkadot Token address to see your Rewards as they are delivered',
-            'The reward will be generated automatically, it is not necessary to add the Polkadot address to receive the reflection. Just add to see the amount of generated Polkadot. Token Address: 0x7083609fce4d1d8dc0c979aab8c869ea2c873402']
+            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!']]
+
+    const features = [
+        ['Dividends',
+            '11% of every buy/sell is taken and redistributed to all holders. Hold InfinityDOT tokens and earn Polkadot. A Minimum of 200,000 tokens is required in order to receive rewards.'],
+        ['Buy Back',
+            'Every time the price drops, our team will use the buyback wallet to raise and maintain the currency on an upward trend. When there is no need for buyback, the funds are being used for marketing.'],
+        ['Auto Pay',
+            'You don’t need to claim your earned Polkadot. It’s automatically sent to your wallet. Note: in periods of lower volume, this may take longer, but you always receive your Polkadot.']
     ]
+
+    // ROadmap
+    // - coinmarketcap listing 25% token burn
+    // coingecko listing
+    // - contract audit
+    // - marketing campaign
+    // whitepaper
+    // - meme contests
+    // exchange listings
+    // airdrop campaign
+    // nft marketplace
 
     return (
         <div>
@@ -99,37 +118,34 @@ function App() {
                     </div>
 
                     <div id='miniTextBlurb'>
-                        <p>Sample Text</p>
-                        <p>token to go to the moon</p>
+                        <p>About InfinityDOT
+                            InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction.
+
+                            With the auto-claim feature, you will receive DOT automatically in your wallet.
+
+                            Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity
+                        </p>
                     </div>
 
                     <div id='buttonDiv'>
                         <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
-                            Tokenomics
-                        </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}>
-                            Swap
-                        </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}>
-                            Roadmap
-                        </motion.button>
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}>
-                            Community
+                            Buy
                         </motion.button>
                         <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}>
                             Chart
+                        </motion.button>
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            Community
                         </motion.button>
                     </div>
                 </motion.div>
 
                 <div className='rightMainPage'>
                     <div className='imageBox'>
-                        <img src={pic1} alt='na' />
+                        <img src={logo} alt='na' />
                     </div>
 
                     {/* <div id='rightTextBlurb'>
@@ -154,11 +170,30 @@ function App() {
                             opacity: 1,
                         }}>
                         <div>
-                            <p>{tokenName}</p>
+                            <p>{tokenName} Tokenomics</p>
                             <p>{tokenTicker}</p>
-                            <p>editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their i</p>
-                            <p>Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
-                            <p>electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+
+
+                            <p>Total supply: 1.000.000.000.000.000</p>
+                            <p>There is a 15% buy tax.An extra 1% fee is applied to all sales to
+                                encourage holding, discourage swing trading and to lessen whale
+                                manipulation.At times, our tokenomics may change in response to
+                                market conditions.</p>
+
+                            <p>The token contract employs a static rewards system.The 15% buy
+                                tax is split as follows:
+                                11% is redistributed to holders
+                                2% is used to fuel the liquidity pool
+                                2% is allocated to the Marketing wallet
+                            </p>
+                            <p>
+                                Token supply:
+                                50% burned, what if we keep a burn wallet and schedule a burn every week until depleted?
+                                2% team
+                                20% liquidity pool
+                                25% presale
+                                3% marketing
+                            </p>
                         </div>
 
                         <motion.button className='purplebutton font24 font' whileHover={{ scale: 1.1 }}
@@ -175,7 +210,7 @@ function App() {
                     <p className='font32 font padding1'>How To Buy</p>
                 </div>
                 <div className='howToBuyData'>
-                    <div className='left padding2'>
+                    <div className='padding2'>
                         <p className='font24'>{tokenTicker}</p>
                         <div className='howtobuyContainerContainer'>
                             {infoBox.map((entry, index) =>
@@ -187,13 +222,21 @@ function App() {
                                                     <p className='font22'>{entry[0]}</p>
                                                     <p className='font18'>{entry[1]}</p>
                                                 </div>
-                                                <div className='buyBox'></div>
+                                                <div className='buyBox'>
+                                                    <div className='imageBox'>
+                                                        <img src={alienAndUfo} alt='na' />
+                                                    </div>
+                                                </div>
                                             </>
                                         )
                                         :
                                         (
                                             <>
-                                                <div className='buyBox'></div>
+                                                <div className='buyBox'>
+                                                    <div className='imageBox'>
+                                                        <img src={alienAndUfo} alt='na' />
+                                                    </div>
+                                                </div>
                                                 <div className='buyBox' key={index}>
                                                     <p className='font22'>{entry[0]}</p>
                                                     <p className='font18'>{entry[1]}</p>
@@ -210,17 +253,12 @@ function App() {
                         </motion.button>
                     </div>
 
-                    <div className='right'>
-                        <div className='imageBox'>
-                            <img src={alienAndUfo} alt='na' />
-                        </div>
-                    </div>
                 </div>
             </div>
 
             <div className='projectInfo' id='projectinfo'>
                 <div className={'headerBar marginTop1 marginBottom1'}>
-                    <p className='font32 font padding1'>Contract and Project Info</p>
+                    <p className='font32 font padding1'>Token Info</p>
                 </div>
                 <div className='projectInfoData'>
                     <div className='top'>
@@ -231,8 +269,12 @@ function App() {
                         </div>
 
                         <div className='right'>
-                            <p className='font24'>Contract</p>
-                            <p className='font18'>very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32</p>
+                            {features.map((entry, index) =>
+                                <div className='featureBox'>
+                                    <p className='font22'>{entry[0]}</p>
+                                    <p className='font18'>{entry[1]}</p>
+                                </div>
+                            )}
                             <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}>
                                 View Contract
