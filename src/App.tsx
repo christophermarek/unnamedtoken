@@ -3,13 +3,20 @@ import './App.scss';
 import StarfieldAnimation from 'react-starfield-animation'
 import pic1 from './assets/spaceAndRocket.svg';
 import logo from './assets/logo.png';
-import astronautAndRocket from './assets/astronautAndRocket.svg';
+import astronautAndRocket from './assets/astronaut.png';
 import alienAndUfo from './assets/alienAndUfo.svg';
 import satellite from './assets/satellite.svg';
 import contract from './assets/contract.svg';
 import twitter from './assets/twitter.webp';
 import telegram from './assets/telegram.webp';
 import reddit from './assets/reddit.webp';
+
+import bnbmetamask from './assets/bnbmetamask.png';
+import metamaskdownload from './assets/metamaskdownload.png';
+import bnbswap from './assets/bnbswap.png';
+import buyandhold from './assets/buyandhold.png';
+
+import pinkpepe from './assets/pinkalien.png';
 
 import { motion } from "framer-motion";
 
@@ -20,7 +27,7 @@ function App() {
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
 
     const tokenName = 'Astral Pepe';
-    const tokenTicker = '$ELONMOON';
+    const tokenTicker = 'GOLD';
 
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
@@ -35,18 +42,32 @@ function App() {
 
     // when name picked need a site title
 
+    //fix z-index over how to buy text so it can be copied
 
     // USE CSS GRID WHERE I CAN SO I KNOW HOW TO DO IT
-    
+
+    // Add transitions for the button presses
+
+    // Add text affect
+
+    // Missing css grid row?
+    // -> Ask for help
+
+    // add glowing effect for text and images
+
     const infoBox = [
         ['Download & setup MetaMask or TrustWallet',
-            'Download MetaMask (a crypto wallet in the form of a browser extension) or TrustWallet (an app for your phone). After that, you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial). they include 3 hyperlinks on their page in this textbox'],
+            'Download MetaMask (a cryptfo wallet in the form of a browser extension) or TrustWallet (an app for your phone). After that, you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial). they include 3 hyperlinks on their page in this textbox',
+            metamaskdownload],
         ['Buy and send BNB to Metamask or TrustWallet',
-            'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".'],
+            'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".',
+            bnbmetamask],
         ['Head over to our Swap to buy InfinityDOT',
-            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. Set the slippage tolerance to 18% (sometimes it may be 20%, depending on how much demand there is).'],
+            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. Set the slippage tolerance to 18% (sometimes it may be 20%, depending on how much demand there is).',
+            bnbswap],
         ['View InfinityDOT and HODL',
-            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!']]
+            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!',
+            buyandhold]]
 
     const features = [
         ['Dividends',
@@ -66,15 +87,18 @@ function App() {
     // - meme contests
     // exchange listings
     // airdrop campaign
-    // nft marketplace
+    // nft marketplace (hpsoi has one)
+
+    // add floating icons menu for social media links and link to top of page
+
 
     return (
         <div>
             <StarfieldAnimation
                 style={{
                     position: 'absolute',
-                    width: '325%',
-                    height: '325%'
+                    width: '100vw',
+                    height: '200vh'
                 }}
             />
 
@@ -99,8 +123,6 @@ function App() {
                     <div className='iconContainer'>
                         <img className='icon' src={twitter} alt='twitter'></img>
                         <img className='icon' src={telegram} alt='telegram'></img>
-                        <img className='icon' src={reddit} alt='reddit'></img>
-
                     </div>
                 </div>
 
@@ -204,100 +226,94 @@ function App() {
                 </div>
 
             </div>
+            <StarfieldAnimation
+                style={{
+                    position: 'absolute',
+                    width: '100vw',
+                    height: '200vh',
+                }}
+            />
 
             <div className='HowToBuy' id='buy'>
                 <div className={'headerBar marginTop1 marginBottom1'}>
                     <p className='font32 font padding1'>How To Buy</p>
                 </div>
-                <div className='howToBuyData'>
-                    <div className='padding2'>
-                        <p className='font24'>{tokenTicker}</p>
-                        <div className='howtobuyContainerContainer'>
-                            {infoBox.map((entry, index) =>
-                                <div className='howtobuycontainer'>
-                                    {index % 2 === 0 ?
-                                        (
-                                            <>
-                                                <div className='buyBox' key={index}>
-                                                    <p className='font22'>{entry[0]}</p>
-                                                    <p className='font18'>{entry[1]}</p>
+                <div className='howToBuyData padding2'>
+                    <div className='howtobuyContainerContainer'>
+                        {infoBox.map((entry, index) =>
+                            <>
+                                {index % 2 === 0 ?
+                                    (
+                                        <>
+                                            <div className='buyBox' key={index}>
+                                                <p >{entry[0]}</p>
+                                                <p >{entry[1]}</p>
+                                            </div>
+                                            <div className='buyBox'>
+                                                <div className='imageBox2'>
+                                                    <img src={entry[2]} alt='na' />
                                                 </div>
-                                                <div className='buyBox'>
-                                                    <div className='imageBox'>
-                                                        <img src={alienAndUfo} alt='na' />
-                                                    </div>
+                                            </div>
+                                        </>
+                                    )
+                                    :
+                                    (
+                                        <>
+                                            <div className='buyBox'>
+                                                <div className='imageBox2'>
+                                                    <img src={entry[2]} alt='na' />
                                                 </div>
-                                            </>
-                                        )
-                                        :
-                                        (
-                                            <>
-                                                <div className='buyBox'>
-                                                    <div className='imageBox'>
-                                                        <img src={alienAndUfo} alt='na' />
-                                                    </div>
-                                                </div>
-                                                <div className='buyBox' key={index}>
-                                                    <p className='font22'>{entry[0]}</p>
-                                                    <p className='font18'>{entry[1]}</p>
-                                                </div>
-                                            </>
-                                        )
-                                    }
-                                </div>
-                            )}
-                        </div>
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}>
-                            Buy Now
-                        </motion.button>
+                                            </div>
+                                            <div className='buyBox' key={index}>
+                                                <p >{entry[0]}</p>
+                                                <p >{entry[1]}</p>
+                                            </div>
+                                        </>
+                                    )
+                                }
+                            </>
+                        )}
                     </div>
+                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}>
+                        Buy Now
+                    </motion.button>
 
                 </div>
             </div>
-
+            <StarfieldAnimation
+                style={{
+                    position: 'absolute',
+                    width: '100vw',
+                    height: '100vh',
+                }}
+            />
             <div className='projectInfo' id='projectinfo'>
                 <div className={'headerBar marginTop1 marginBottom1'}>
                     <p className='font32 font padding1'>Token Info</p>
                 </div>
-                <div className='projectInfoData'>
-                    <div className='top'>
-                        <div className='left'>
-                            <div className='imageBox marginLeft2'>
-                                <img src={contract} alt='na' />
+                <div className='top'>
+                    <div className='left'>
+                        <div className='imageBox3'>
+                            <img src={pinkpepe} alt='na' />
+                        </div>
+                    </div>
+
+                    <div className='right'>
+                        {features.map((entry, index) =>
+                            <div className='featureBox'>
+                                <p className='font22'>{entry[0]}</p>
+                                <p className='font18'>{entry[1]}</p>
                             </div>
-                        </div>
-
-                        <div className='right'>
-                            {features.map((entry, index) =>
-                                <div className='featureBox'>
-                                    <p className='font22'>{entry[0]}</p>
-                                    <p className='font18'>{entry[1]}</p>
-                                </div>
-                            )}
-                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                View Contract
-                            </motion.button>
-                        </div>
+                        )}
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}>
+                            View Contract
+                        </motion.button>
                     </div>
-
                 </div>
 
             </div>
-            <div className={'footer marginTop1'}>
-                <div className='bottom'>
-                    <div>
-                        <p className='font24'>Twitter</p>
-                        <p className='font24'>Reddit</p>
-                        <p className='font24'>Telegram</p>
-                    </div>
-                    <div className='marginRight2'>
-                        <img src={satellite} alt='na' />
-                    </div>
-                </div>
-            </div>
-
         </div>
     )
 }

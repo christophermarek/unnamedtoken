@@ -22,17 +22,26 @@ body {
 }
 
 .howtobuyContainerContainer {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    z-index: 1 !important;
+    row-gap: 10%;
+    column-gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    margin-bottom: 5%;
 }
 
 .buyBox {
-    width: 50%;
+    z-index: 1;
+    text-align: center;
+    align-self: center;
 }
 
 .howtobuycontainer {
-    display: flex;
-    width: 100%;
+
 }
 
 .headerBar {
@@ -89,7 +98,7 @@ img.icon {
 
 .imageBox {
     z-index: 1;
-    width: 80%;
+    width: 50%;
     align-self: center;
 }
 
@@ -152,6 +161,11 @@ div#buttonDiv {
 .mainPage {
     display: flex;
     width: 100%;
+    align-items: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 7%;
+    margin-bottom: 7%;
 }
 
 .leftMainPage {
@@ -177,6 +191,11 @@ div#rightTextBlurb {
 
 .tokenomicsData {
     display: flex;
+    align-items: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 7%;
+
 }
 
 .left {
@@ -189,10 +208,15 @@ div#rightTextBlurb {
     text-align: center;
     padding: 1%;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .howToBuyData {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bottom {
@@ -207,7 +231,11 @@ div#rightTextBlurb {
 
 .top {
     display: flex;
-    padding: 5%;
+}
+
+.imageBox3{
+    width: 95%;
+    margin-left: 2%;
 }
 
 .projectInfoData {

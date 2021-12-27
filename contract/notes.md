@@ -17,4 +17,12 @@ Change until this is fixed
 
 
 https://bscscan.com/address/0x3C0cc8435F3D488200B73308477f21aFbbeD00FE#code
-this is different a little than above just adds some restrictions and is extra code, prop should do these changes myself
+this is different a little than above just adds some restrictions and is extra code, prob should do these changes myself
+
+
+PooCoin how to buy
+Set slippage to 9% on pancakeswap.
+$1.473121
+Reflect token on the Binance Smart Chain.
+A 8% fee is charged on each transaction. 4% is distributed to other token holders and 4% is burned.
+Initial supply: 10,000,000. No more than 100,000 can be traded in 1 transaction.
