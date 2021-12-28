@@ -31,7 +31,6 @@ function App() {
 
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
-    // -need site finished so i can go through smart contract properly'
     //unvaxxed sperm has a nice page i can copy too
     // copy their faq too.
 
@@ -41,10 +40,6 @@ function App() {
     // and attach the wallet
 
     // when name picked need a site title
-
-    //fix z-index over how to buy text so it can be copied
-
-    // USE CSS GRID WHERE I CAN SO I KNOW HOW TO DO IT
 
     // Add transitions for the button presses
 
