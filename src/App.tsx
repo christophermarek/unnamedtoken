@@ -7,9 +7,10 @@ import astronautAndRocket from './assets/astronaut.png';
 import alienAndUfo from './assets/alienAndUfo.svg';
 import satellite from './assets/satellite.svg';
 import contract from './assets/contract.svg';
-import twitter from './assets/twitter.webp';
-import telegram from './assets/telegram.webp';
+import twitter from './assets/twitter.png';
+import telegram from './assets/telegram.png';
 import reddit from './assets/reddit.webp';
+import toTop from './assets/toTop.png';
 
 import bnbmetamask from './assets/bnbmetamask.png';
 import metamaskdownload from './assets/metamaskdownload.png';
@@ -26,8 +27,8 @@ function App() {
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
 
-    const tokenName = 'Astral Pepe';
-    const tokenTicker = 'GOLD';
+    const tokenName = 'Placeholder Name';
+    const tokenTicker = 'Placeholder Ticker';
 
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
@@ -43,10 +44,15 @@ function App() {
 
     // Add transitions for the button presses
 
+    // Add seo head for next
+
     // Add text affect
 
     // Missing css grid row?
     // -> Ask for help
+
+    // I think anti whale is good because I cant buy a lot myself. So i force it to be a community coin with lots of small holders,
+    // "by design" because i dont have a large balance to begin buying. anti whale mechanic, but whales could just create more wallets.
 
     // add glowing effect for text and images
 
@@ -89,6 +95,7 @@ function App() {
 
     return (
         <div>
+            
             <StarfieldAnimation
                 style={{
                     position: 'absolute',
@@ -96,6 +103,11 @@ function App() {
                     height: '200vh'
                 }}
             />
+            <div className='iconContainer'>
+                        <img className='icon' src={twitter} alt='twitter'></img>
+                        <img className='icon' src={telegram} alt='telegram'></img>
+                        {/* <img className='icon' src={toTop} alt='toTop'></img> */}
+            </div>
 
             <div className={'headerBar marginBottom1'}>
                 <div className='leftDiv'>
@@ -115,10 +127,6 @@ function App() {
 
                     </div>
 
-                    <div className='iconContainer'>
-                        <img className='icon' src={twitter} alt='twitter'></img>
-                        <img className='icon' src={telegram} alt='telegram'></img>
-                    </div>
                 </div>
 
             </div>
