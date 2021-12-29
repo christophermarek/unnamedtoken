@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion"
+import { useMediaQuery } from 'react-responsive';
 
 interface ProjectInfo {
     pinkpepe: string,
@@ -6,6 +7,8 @@ interface ProjectInfo {
 }
 
 export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) => {
+
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     return (
         <div className='projectInfo' id='projectinfo'>
@@ -17,6 +20,12 @@ export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) =>
                     <div className='imageBox3'>
                         <img src={pinkpepe} alt='na' />
                     </div>
+                    {isPortrait &&
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
+                            whileTap={{ scale: 0.9 }}>
+                            View Contract
+                        </motion.button>
+                    }
                 </div>
 
                 <div className='right'>
@@ -26,10 +35,13 @@ export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) =>
                             <p className='font18'>{entry[1]}</p>
                         </div>
                     )}
-                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black'}}
-                        whileTap={{ scale: 0.9 }}>
-                        View Contract
-                    </motion.button>
+
+                    {!isPortrait &&
+                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
+                            whileTap={{ scale: 0.9 }}>
+                            View Contract
+                        </motion.button>
+                    }
                 </div>
             </div>
         </div>
