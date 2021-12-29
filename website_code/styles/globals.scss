@@ -20,6 +20,23 @@ body {
     font-family: "Space Mono", monospace;
 }
 
+.padding2 {
+    padding: 2%;
+}
+
+.marginRight2 {
+    margin-right: 2%;
+}
+
+.marginTop1 {
+    margin-top: 1%;
+}
+
+.marginBottom1 {
+    margin-bottom: 1%;
+}
+
+
 .textbox {
     width: fit-content;
 }
@@ -108,6 +125,29 @@ body {
     color: grey;
 }
 
+
+
+@media (orientation: portrait) {
+    .linkBtn {
+        z-index: 1;
+        position: relative;
+        padding: 1%;
+        margin: 0%;
+        color: $text_color;
+        text-decoration: none;
+        width: 100%;
+    }
+    
+    .linkBtn:hover {
+        color: white;
+        background-color: grey;
+    }
+
+    .tokenomicsText{
+        font-size: x-small;
+    }
+}
+
 .leftDiv {
     width: 50%;
 }
@@ -137,6 +177,13 @@ img.icon {
     height: 5%;
 }
 
+@media (orientation: portrait) {
+    img.icon {
+        width: 15%;
+        height: 15%;
+    }
+}
+
 .iconContainer {
     display: flex;
     position: fixed;
@@ -156,6 +203,7 @@ img.icon {
     z-index: 1;
     width: 50%;
     align-self: center;
+    text-align: center;
 }
 
 img {
@@ -186,8 +234,18 @@ p {
 div#buttonDiv {
     display: flex;
     flex-direction: row;
-    margin-top: 1%;
     align-items: center;
+    margin-top: 1%;
+
+}
+
+@media (orientation: portrait) {
+
+    div#buttonDiv {
+        margin-bottom: 1%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 
 .ticker {
@@ -200,6 +258,10 @@ div#buttonDiv {
 
 .font24 {
     font-size: large;
+}
+
+.fontmedium{
+    font-size: medium
 }
 
 .font22 {
@@ -333,6 +395,7 @@ div#rightTextBlurb {
 
 .top {
     display: flex;
+    margin: 1%;
 }
 
 .imageBox3 {
@@ -352,20 +415,4 @@ div#rightTextBlurb {
     // background: radial-gradient(circle, $purple3Rgb 0%, $purple5Rgb 100%);
     background: none;
     font-family: "Space Mono", monospace;
-}
-
-.padding2 {
-    padding: 2%;
-}
-
-.marginRight2 {
-    margin-right: 2%;
-}
-
-.marginTop1 {
-    margin-top: 1%;
-}
-
-.marginBottom1 {
-    margin-bottom: 1%;
 }
