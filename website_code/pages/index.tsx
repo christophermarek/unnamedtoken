@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 
+import { MainBox } from '../components/mainBox';
+import { TokenomicsBox } from '../components/tokenomicsBox';
 
 import { motion } from "framer-motion";
 import dynamic from 'next/dynamic';
@@ -47,9 +49,6 @@ const Home: React.FC = ({ }) => {
 
     // Add text affect
 
-    // Missing css grid row?
-    // -> Ask for help
-
     // I think anti whale is good because I cant buy a lot myself. So i force it to be a community coin with lots of small holders,
     // "by design" because i dont have a large balance to begin buying. anti whale mechanic, but whales could just create more wallets.
 
@@ -89,9 +88,15 @@ const Home: React.FC = ({ }) => {
     // airdrop campaign
     // nft marketplace (hpsoi has one)
 
-    // add floating icons menu for social media links and link to top of page
-
-
+    const floatingIcons = () => {
+        return (
+            <div className='iconContainer'>
+                <img className='icon' src={twitter} alt='twitter'></img>
+                <img className='icon' src={telegram} alt='telegram'></img>
+                {/* <img className='icon' src={toTop} alt='toTop'></img> */}
+            </div>
+        )
+    }
 
 
     return (
@@ -104,19 +109,9 @@ const Home: React.FC = ({ }) => {
 
             <div>
 
-                <StarfieldAnimation
-                    style={{
-                        position: 'absolute',
-                        width: '100vw',
-                        height: '100vh'
-                    }}
-                />
+                <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
 
-                <div className='iconContainer'>
-                    <img className='icon' src={twitter} alt='twitter'></img>
-                    <img className='icon' src={telegram} alt='telegram'></img>
-                    {/* <img className='icon' src={toTop} alt='toTop'></img> */}
-                </div>
+                {floatingIcons()}
 
                 <div className={'headerBar marginBottom1'}>
                     <div className='leftDiv'>
@@ -139,119 +134,15 @@ const Home: React.FC = ({ }) => {
                     </div>
 
                 </div>
-                <div className='mainPage'>
-                    <motion.div className='leftMainPage' initial={{ opacity: 0 }}
-                        animate={{
-                            opacity: 1,
-                        }}>
-                        <div id='miniInfoBox'>
-                            <ul className='tokenNameandTicker'>
-                                <li className='name font24'>{tokenName}</li>
-                                <li className='ticker font 18'>${tokenTicker}</li>
-                            </ul>
-                        </div>
 
-                        <div id='miniTextBlurb'>
-                            <p>About InfinityDOT
-                                InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction.
+                <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
 
-                                With the auto-claim feature, you will receive DOT automatically in your wallet.
+                <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
 
-                                Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity
-                            </p>
-                        </div>
+                <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket}/>
 
-                        <div id='buttonDiv'>
-                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                Buy
-                            </motion.button>
-                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                Chart
-                            </motion.button>
-                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                Community
-                            </motion.button>
-                        </div>
-                    </motion.div>
+                <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
 
-                    <div className='rightMainPage'>
-                        <div className='imageBox'>
-                            <img src={logo} alt='na' />
-                        </div>
-
-                        {/* <div id='rightTextBlurb'>
-                        <p>Hello this is just filler</p>
-                        <p>filler text filler text</p>
-                    </div> */}
-                    </div>
-                </div>
-                <StarfieldAnimation
-                    style={{
-                        position: 'absolute',
-                        width: '100vw',
-                        height: '100vh',
-                    }}
-                />
-                <div className='TokenomicsPage' id='tokenomics'>
-                    <div className={'headerBar marginTop1 marginBottom1'}>
-                        <p className='font32 font padding1'>Tokenomics</p>
-                    </div>
-                    <div className='tokenomicsData'>
-                        <div className='left'>
-                            <div className='imageBox'>
-                                <img src={astronautAndRocket} alt='na' />
-                            </div>
-                        </div>
-                        <motion.div className='right' initial={{ opacity: 0 }}
-                            animate={{
-                                opacity: 1,
-                            }}>
-                            <div>
-                                <p>{tokenName} Tokenomics</p>
-                                <p>{tokenTicker}</p>
-
-
-                                <p>Total supply: 1.000.000.000.000.000</p>
-                                <p>There is a 15% buy tax.An extra 1% fee is applied to all sales to
-                                    encourage holding, discourage swing trading and to lessen whale
-                                    manipulation.At times, our tokenomics may change in response to
-                                    market conditions.</p>
-
-                                <p>The token contract employs a static rewards system.The 15% buy
-                                    tax is split as follows:
-                                    11% is redistributed to holders
-                                    2% is used to fuel the liquidity pool
-                                    2% is allocated to the Marketing wallet
-                                </p>
-                                <p>
-                                    Token supply:
-                                    50% burned, what if we keep a burn wallet and schedule a burn every week until depleted?
-                                    2% team
-                                    20% liquidity pool
-                                    25% presale
-                                    3% marketing
-                                </p>
-                            </div>
-
-                            <motion.button className='purplebutton font24 font' whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                Buy Now
-                            </motion.button>
-                        </motion.div>
-                    </div>
-
-                </div>
-
-                <StarfieldAnimation
-                    style={{
-                        position: 'absolute',
-                        width: '100vw',
-                        height: '200vh',
-                    }}
-                />
                 <div className='HowToBuy' id='buy'>
                     <div className={'headerBar marginTop1 marginBottom1'}>
                         <p className='font32 font padding1'>How To Buy</p>
@@ -299,13 +190,9 @@ const Home: React.FC = ({ }) => {
 
                     </div>
                 </div>
-                <StarfieldAnimation
-                    style={{
-                        position: 'absolute',
-                        width: '100vw',
-                        height: '100vh',
-                    }}
-                />
+
+                <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
+
                 <div className='projectInfo' id='projectinfo'>
                     <div className={'headerBar marginTop1 marginBottom1'}>
                         <p className='font32 font padding1'>Token Info</p>
