@@ -50,7 +50,7 @@ export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicke
                         </p>
                     </div>
 
-                    <motion.button className='purplebutton font24 font' whileHover={{ scale: 1.1 }}
+                    <motion.button className='purplebutton font24 font' whileHover={{ scale: 1.1, color: 'black' }}
                         whileTap={{ scale: 0.9 }}>
                         Buy Now
                     </motion.button>

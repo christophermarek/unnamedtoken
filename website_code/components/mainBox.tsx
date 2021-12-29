@@ -8,6 +8,12 @@ interface MainProps {
 
 export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo }) => {
 
+    const aboutText = [
+        'About InfinityDOT',
+        'InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction. With the auto-claim feature, you will receive DOT automatically in your wallet.',
+        'Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity'
+    ];
+
     return (
         <div className='mainPage'>
             <motion.div className='leftMainPage' initial={{ opacity: 0 }}
@@ -22,27 +28,19 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
                 </div>
 
                 <div id='miniTextBlurb'>
-                    <p>About InfinityDOT
-                        InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction.
-
-                        With the auto-claim feature, you will receive DOT automatically in your wallet.
-
-                        Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity
-                    </p>
+                    <p>{aboutText[0]}</p>
+                    <p>{aboutText[1]}</p>
+                    <p>{aboutText[2]}</p>
                 </div>
 
                 <div id='buttonDiv'>
-                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
+                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
                         whileTap={{ scale: 0.9 }}>
                         Buy
                     </motion.button>
-                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
+                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
                         whileTap={{ scale: 0.9 }}>
                         Chart
-                    </motion.button>
-                    <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}>
-                        Community
                     </motion.button>
                 </div>
             </motion.div>
