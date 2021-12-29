@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
+import { motion } from "framer-motion";
+import dynamic from 'next/dynamic';
 
 import { MainBox } from '../components/mainBox';
 import { TokenomicsBox } from '../components/tokenomicsBox';
-
-import { motion } from "framer-motion";
-import dynamic from 'next/dynamic';
+import { HowToBuyBox } from '../components/howToBuyBox';
+import { ProjectInfoBox } from '../components/projectInfoBox';
 
 const Home: React.FC = ({ }) => {
 
@@ -53,6 +54,7 @@ const Home: React.FC = ({ }) => {
     // "by design" because i dont have a large balance to begin buying. anti whale mechanic, but whales could just create more wallets.
 
     // add glowing effect for text and images
+
 
     const infoBox = [
         ['Download & setup MetaMask or TrustWallet',
@@ -143,82 +145,12 @@ const Home: React.FC = ({ }) => {
 
                 <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
 
-                <div className='HowToBuy' id='buy'>
-                    <div className={'headerBar marginTop1 marginBottom1'}>
-                        <p className='font32 font padding1'>How To Buy</p>
-                    </div>
-                    <div className='howToBuyData padding2'>
-                        <div className='howtobuyContainerContainer'>
-                            {infoBox.map((entry, index) =>
-                                <>
-                                    {index % 2 === 0 ?
-                                        (
-                                            <>
-                                                <div className='buyBox' key={index}>
-                                                    <p >{entry[0]}</p>
-                                                    <p >{entry[1]}</p>
-                                                </div>
-                                                <div className='buyBox'>
-                                                    <div className='imageBox2'>
-                                                        <img src={entry[2]} alt='na' />
-                                                    </div>
-                                                </div>
-                                            </>
-                                        )
-                                        :
-                                        (
-                                            <>
-                                                <div className='buyBox'>
-                                                    <div className='imageBox2'>
-                                                        <img src={entry[2]} alt='na' />
-                                                    </div>
-                                                </div>
-                                                <div className='buyBox' key={index}>
-                                                    <p >{entry[0]}</p>
-                                                    <p >{entry[1]}</p>
-                                                </div>
-                                            </>
-                                        )
-                                    }
-                                </>
-                            )}
-                        </div>
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}>
-                            Buy Now
-                        </motion.button>
-
-                    </div>
-                </div>
+                <HowToBuyBox infoBox={infoBox}/>
 
                 <StarfieldAnimation style={{ position: 'absolute', width: '100vw', height: '100vh' }} />
 
-                <div className='projectInfo' id='projectinfo'>
-                    <div className={'headerBar marginTop1 marginBottom1'}>
-                        <p className='font32 font padding1'>Token Info</p>
-                    </div>
-                    <div className='top'>
-                        <div className='left'>
-                            <div className='imageBox3'>
-                                <img src={pinkpepe} alt='na' />
-                            </div>
-                        </div>
-
-                        <div className='right'>
-                            {features.map((entry, index) =>
-                                <div key={index} className='featureBox'>
-                                    <p className='font22'>{entry[0]}</p>
-                                    <p className='font18'>{entry[1]}</p>
-                                </div>
-                            )}
-                            <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.9 }}>
-                                View Contract
-                            </motion.button>
-                        </div>
-                    </div>
-
-                </div>
+                <ProjectInfoBox pinkpepe={pinkpepe} features={features}/>
+                
             </div>
 
         </div>
