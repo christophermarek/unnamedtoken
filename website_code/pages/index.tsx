@@ -23,7 +23,7 @@ const Home: React.FC = ({ }) => {
 
     // Need to force an any type because it has no definition
     // @ts-ignore
-    const StarfieldAnimation: any = dynamic(import('react-starfield-animation'), { ssr: false });
+    const StarfieldAnimation: any = dynamic(() => import('react-starfield-animation'), { ssr: false });
 
     const tokenName = 'Placeholder Name';
     const tokenTicker = 'Placeholder Ticker';
