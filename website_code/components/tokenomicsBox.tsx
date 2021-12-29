@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion"
+import { useMediaQuery } from 'react-responsive';
 
 interface TokenomicsProps {
     tokenName: string,
@@ -7,6 +8,8 @@ interface TokenomicsProps {
 }
 
 export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicker, astronautAndRocket }) => {
+
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     return (
         <div className='TokenomicsPage' id='tokenomics'>
@@ -24,9 +27,12 @@ export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicke
                         opacity: 1,
                     }}>
                     <div>
-                        <p>{tokenName} Tokenomics</p>
-                        <p>{tokenTicker}</p>
-
+                        {!isPortrait &&
+                            <>
+                                <p>{tokenName} Tokenomics</p>
+                                <p>{tokenTicker}</p>
+                            </>
+                        }
 
                         <p>Total supply: 1.000.000.000.000.000</p>
                         <p>There is a 15% buy tax.An extra 1% fee is applied to all sales to

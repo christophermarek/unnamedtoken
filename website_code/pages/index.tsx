@@ -129,8 +129,11 @@ const Home: React.FC = ({ }) => {
                     (
                         <>
                             {topHeader(true)}
+                            <StarfieldAnimation numParticles={600} style={{ position: 'absolute', width: '100vw', height: '425vh' }} />
                             <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
-
+                            <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket} />
+                            <HowToBuyBox infoBox={infoBox} />
+                            <ProjectInfoBox pinkpepe={pinkpepe} features={features} />
                         </>
                     )
                     :
