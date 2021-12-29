@@ -21,8 +21,8 @@ export const HowToBuyBox: React.FC<HowToBuyProps> = ({ infoBox }) => {
                                 (
                                     <>
                                         <div className='buyBox' key={index}>
-                                            <p >{entry[0]}</p>
-                                            <p >{entry[1]}</p>
+                                            <p className='font18'>{entry[0]}</p>
+                                            <p className='font18' >{entry[1]}</p>
                                         </div>
                                         <div className='buyBox'>
                                             <div className='imageBox2'>
@@ -40,8 +40,8 @@ export const HowToBuyBox: React.FC<HowToBuyProps> = ({ infoBox }) => {
                                             </div>
                                         </div>
                                         <div className='buyBox' key={index}>
-                                            <p >{entry[0]}</p>
-                                            <p >{entry[1]}</p>
+                                            <p className='font18' >{entry[0]}</p>
+                                            <p className='font18' >{entry[1]}</p>
                                         </div>
                                     </>
                                 )

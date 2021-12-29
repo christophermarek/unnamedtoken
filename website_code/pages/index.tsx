@@ -61,7 +61,7 @@ const Home: React.FC = ({ }) => {
             'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".',
             bnbmetamask],
         ['Head over to our Swap to buy InfinityDOT',
-            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. Set the slippage tolerance to 18% (sometimes it may be 20%, depending on how much demand there is).',
+            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. FOR MOBILE REMOVE CONTRACT ADDRESS AND ADD TO TOP',
             bnbswap],
         ['View InfinityDOT and HODL',
             'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!',
