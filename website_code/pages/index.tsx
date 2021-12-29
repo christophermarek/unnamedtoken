@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import { motion } from "framer-motion";
 import dynamic from 'next/dynamic';
+import { useMediaQuery } from 'react-responsive';
 
 import { MainBox } from '../components/mainBox';
 import { TokenomicsBox } from '../components/tokenomicsBox';
@@ -26,6 +27,7 @@ const Home: React.FC = ({ }) => {
     const tokenName = 'Placeholder Name';
     const tokenTicker = 'Placeholder Ticker';
 
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
 
@@ -94,20 +96,18 @@ const Home: React.FC = ({ }) => {
         )
     }
 
-    const topHeader = () => {
+    const topHeader = (isPortrait: boolean) => {
         return (
-            <div className={'headerBar marginBottom1'}>
-                <div className='leftDiv'>
+            <div className={(isPortrait ? 'mobileHeaderBar ' : 'headerBar ') + 'marginBottom1'}>
+                <div className={(isPortrait ? 'mobileLeftDiv' : 'leftDiv')}>
                     <p className='name font32' >{tokenName}</p>
                 </div>
-                <div className='rightDiv'>
-                    <div className='btnContainer'>
-                        <a className='linkBtn' href="#tokenomics">Tokenomics</a>
-                        <a className='linkBtn' href="#buy">Buy</a>
-                        <a className='linkBtn' href="#projectinfo">Info</a>
-                        <a className='linkBtn' href="#">Roadmap</a>
-                        <a className='linkBtn' href="#">Chart</a>
-                    </div>
+                <div className={(isPortrait ? 'mobileRightDiv' : 'rightDiv')}>
+                    <a className='linkBtn' href="#tokenomics">Tokenomics</a>
+                    <a className='linkBtn' href="#buy">Buy</a>
+                    <a className='linkBtn' href="#projectinfo">Info</a>
+                    <a className='linkBtn' href="#">Roadmap</a>
+                    <a className='linkBtn' href="#">Chart</a>
                 </div>
             </div>
         )
@@ -122,18 +122,32 @@ const Home: React.FC = ({ }) => {
             </Head>
 
             <div>
-
                 {floatingIcons()}
-                {topHeader()}
+                {isPortrait ?
 
-                <StarfieldAnimation numParticles={600} style={{ position: 'absolute', width: '100vw', height: '425vh' }} />
-                <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
-                <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket} />
-                <HowToBuyBox infoBox={infoBox} />
-                <ProjectInfoBox pinkpepe={pinkpepe} features={features} />
+                    (
+                        <>
+                            {topHeader(true)}
+                            <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
 
+                        </>
+                    )
+                    :
+                    (
+                        <>
+                            {topHeader(false)}
+                            <StarfieldAnimation numParticles={600} style={{ position: 'absolute', width: '100vw', height: '425vh' }} />
+                            <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
+                            <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket} />
+                            <HowToBuyBox infoBox={infoBox} />
+                            <ProjectInfoBox pinkpepe={pinkpepe} features={features} />
+                        </>
+                    )
+
+                }
             </div>
-        </div>
+
+        </div >
     )
 }
 

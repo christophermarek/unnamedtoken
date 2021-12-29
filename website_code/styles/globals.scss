@@ -56,6 +56,20 @@ body {
     background: none;
 }
 
+.mobileHeaderBar{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+}
+
 .linkBtn{
     z-index: 1;
     position: relative;
@@ -79,6 +93,21 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.mobileLeftDiv{
+    width: 100%;
+    text-align: center;
+}
+
+.mobileRightDiv{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    // justify-content: space-between;
+    align-items: center;
+}
+
+
 
 img.icon {
     width: 5%;
@@ -151,19 +180,19 @@ div#buttonDiv {
 }
 
 .font32 {
-    font-size: 32px;
+    font-size: x-large;
 }
 
 .font24 {
-    font-size: 24px;
+    font-size: large;
 }
 
 .font22 {
-    font-size: 22px;
+    font-size: small;
 }
 
 .font18 {
-    font-size: 18px;
+    font-size: x-small;
 }
 
 .mainPage {
