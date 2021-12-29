@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion"
+import { useMediaQuery } from 'react-responsive';
 
 interface MainProps {
     tokenName: string,
@@ -8,29 +9,39 @@ interface MainProps {
 
 export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo }) => {
 
+    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+
     const aboutText = [
-        'About InfinityDOT',
         'InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction. With the auto-claim feature, you will receive DOT automatically in your wallet.',
         'Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity'
     ];
 
     return (
         <div className='mainPage'>
+
+            {isPortrait &&
+                <div id='miniInfoBox'>
+                        <p className='name font22'>{tokenName}</p>
+                        <p className='name font22'> ${tokenTicker}</p>
+                    </div>
+            }
+
             <motion.div className='leftMainPage' initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
                 }}>
-                <div id='miniInfoBox'>
-                    <ul className='tokenNameandTicker'>
-                        <li className='name font24'>{tokenName}</li>
-                        <li className='ticker font 18'>${tokenTicker}</li>
-                    </ul>
-                </div>
+                {!isPortrait &&
+                    <div id='miniInfoBox'>
+                        <ul className='tokenNameandTicker'>
+                            <li className='name font24'>{tokenName}</li>
+                            <li className='ticker font18'>${tokenTicker}</li>
+                        </ul>
+                    </div>
+                }
 
                 <div id='miniTextBlurb'>
-                    <p>{aboutText[0]}</p>
-                    <p>{aboutText[1]}</p>
-                    <p>{aboutText[2]}</p>
+                    <p className='name font18'>{aboutText[0]}</p>
+                    <p className='name font18'>{aboutText[1]}</p>
                 </div>
 
                 <div id='buttonDiv'>
@@ -43,14 +54,14 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
                         Chart
                     </motion.button>
                 </div>
-            </motion.div>
+            </motion.div >
 
             <div className='rightMainPage'>
                 <div className='imageBox'>
                     <img src={src_logo} alt='na' />
                 </div>
             </div>
-        </div>
+        </div >
     )
 
 }

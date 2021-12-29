@@ -6,19 +6,22 @@ $purple2: #9614d0;
 
 $text_color: white;
 
-
 body {
     background-color: black;
     max-width: 100%;
     overflow-x: hidden;
     color: $text_color;
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     margin: 0;
     padding: 0;
 }
 
 .font {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
+}
+
+.textbox {
+    width: fit-content;
 }
 
 .howtobuyContainerContainer {
@@ -40,37 +43,36 @@ body {
 }
 
 .howtobuycontainer {
-
 }
 
 .headerBar {
     width: 100%;
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     z-index: 1;
     margin-top: -1%;
     display: flex;
     justify-content: space-around;
     text-align: center;
-    // background: $purple3Rgb;
-    // background: radial-gradient(circle, $purple3Rgb 0%, $purple5Rgb 100%);
     background: none;
+    flex-direction: row;
+}
+@media (orientation: portrait) {
+    .headerBar {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+    }
 }
 
-.mobileHeaderBar{
-    display: flex;
+.column {
     flex-direction: column;
-
 }
 
-.column{
-    flex-direction: column;
-}
-
-.row{
+.row {
     flex-direction: row;
 }
 
-.linkBtn{
+.linkBtn {
     z-index: 1;
     position: relative;
     padding: 1%;
@@ -79,35 +81,32 @@ body {
     text-decoration: none;
 }
 
-.linkBtn:hover{
+.linkBtn:hover {
     color: grey;
 }
 
-.leftDiv{
+.leftDiv {
     width: 50%;
 }
 
-.rightDiv{
+.rightDiv {
     display: flex;
     width: 50%;
     justify-content: space-between;
     align-items: center;
 }
-
-.mobileLeftDiv{
-    width: 100%;
-    text-align: center;
+@media (orientation: portrait) {
+    .leftDiv {
+        width: 100%;
+        text-align: center;
+    }
+    .rightDiv {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-
-.mobileRightDiv{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    // justify-content: space-between;
-    align-items: center;
-}
-
-
 
 img.icon {
     width: 5%;
@@ -124,10 +123,9 @@ img.icon {
     right: 2%;
     z-index: 99;
     align-items: center;
-
 }
 
-.btnContainer{
+.btnContainer {
     width: 100%;
 }
 
@@ -138,7 +136,7 @@ img.icon {
 }
 
 img {
-    width: 100%
+    width: 100%;
 }
 
 .purplebutton {
@@ -152,17 +150,14 @@ img {
     z-index: 1;
 }
 
-
-
 p {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
 }
 
 .tokenNameandTicker {
     padding: 1%;
     list-style-type: none;
-    font-family: 'Space Mono', monospace;
-
+    font-family: "Space Mono", monospace;
 }
 
 div#buttonDiv {
@@ -180,7 +175,7 @@ div#buttonDiv {
 }
 
 .font32 {
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .font24 {
@@ -193,6 +188,24 @@ div#buttonDiv {
 
 .font18 {
     font-size: x-small;
+}
+
+@media (orientation: portrait) {
+    .font32 {
+        font-size: x-large;
+    }
+
+    .font24 {
+        font-size: large;
+    }
+
+    .font22 {
+        font-size: medium;
+    }
+
+    .font18 {
+        font-size: small;
+    }
 }
 
 .mainPage {
@@ -218,6 +231,35 @@ div#buttonDiv {
     width: 65%;
 }
 
+@media (orientation: portrait) {
+    .mainPage {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #miniInfoBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .leftMainPage {
+        width: 90%;
+    }
+    
+    .rightMainPage {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+}
+
 div#rightTextBlurb {
     text-align: center;
 }
@@ -232,7 +274,6 @@ div#rightTextBlurb {
     margin-left: 7%;
     margin-right: 7%;
     margin-bottom: 7%;
-
 }
 
 .left {
@@ -270,7 +311,7 @@ div#rightTextBlurb {
     display: flex;
 }
 
-.imageBox3{
+.imageBox3 {
     width: 95%;
     margin-left: 2%;
 }
@@ -286,7 +327,7 @@ div#rightTextBlurb {
     // background: $purple3Rgb;
     // background: radial-gradient(circle, $purple3Rgb 0%, $purple5Rgb 100%);
     background: none;
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
 }
 
 .padding2 {
