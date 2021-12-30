@@ -78,6 +78,8 @@ html,body {
     text-align: center;
     background: none;
     flex-direction: row;
+    text-shadow: white 1px 0 10px;
+
 }
 @media (orientation: portrait) {
     .headerBar {
@@ -124,13 +126,17 @@ html,body {
     padding: 1%;
     margin: 5%;
     color: $text_color;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .linkBtn:hover {
     color: grey;
 }
 
+.tokenomicsText{
+    text-shadow: white 1px 0 10px;
+
+}
 
 
 @media (orientation: portrait) {
@@ -140,7 +146,7 @@ html,body {
         padding: 1%;
         margin: 0%;
         color: $text_color;
-        text-decoration: none;
+        text-decoration: underline;
         width: 100%;
     }
     
@@ -231,6 +237,7 @@ img {
     padding: 2%;
     margin: 1%;
     z-index: 1;
+    box-shadow: 1px 1px 13px #414141;
 }
 
 p {
@@ -241,6 +248,7 @@ p {
     padding: 1%;
     list-style-type: none;
     font-family: "Space Mono", monospace;
+    text-shadow: white 1px 0 10px;
 }
 
 div#buttonDiv {
@@ -263,10 +271,13 @@ div#buttonDiv {
 
 .buyBoxTitle{
     font-size: x-large;
+    text-shadow: #ffeb86 0.5px 0 5px;
 }
 
 .buyBoxText{
     font-size: medium;
+    text-shadow: white 0.5px 0 5px;
+
 }
 
 @media (orientation: portrait) {
@@ -355,6 +366,15 @@ div#buttonDiv {
     display: flex;
     flex-direction: column;
     width: 65%;
+}
+
+.accentshadow{
+    text-shadow: #ffeb86 0.5px 0 5px;
+}
+
+#miniTextBlurb{
+    text-shadow: white 0.5px 0 5px;
+
 }
 
 
@@ -471,3 +491,6 @@ div#rightTextBlurb {
     background: none;
     font-family: "Space Mono", monospace;
 }
+
+
+

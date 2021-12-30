@@ -19,21 +19,26 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
     return (
         <div className='mainPage'>
 
-            {isPortrait &&
-                <div id='miniInfoBox'>
-                        <p className='nomargin font24'>{tokenName}</p>
-                        <p className='nomargin font24'> ${tokenTicker}</p>
-                    </div>
+            {/* for some reason i have to render it empty, if i dont the divs get placed incorrectly in the dom */}
+            {isPortrait ?
+                <div id={'miniInfoBox'}>
+                    <p className='nomargin font24 accentshadow'>{tokenName}</p>
+                    <p className='nomargin font24 accentshadow'> ${tokenTicker}</p>
+                </div>
+                :
+                <div id={'miniInfoBox'}></div>
             }
 
             <div className='leftMainPage'>
-                {!isPortrait &&
+                {!isPortrait ?
                     <div id='miniInfoBox'>
                         <ul className='tokenNameandTicker'>
-                            <li className='name fontxlarge'>{tokenName}</li>
-                            <li className='ticker font24'>${tokenTicker}</li>
+                            <li className='name fontxlarge accentshadow'>{tokenName}</li>
+                            <li className='ticker font24 accentshadow'>${tokenTicker}</li>
                         </ul>
                     </div>
+                    :
+                    <div id={'miniInfoBox'}></div>
                 }
 
                 <div id='miniTextBlurb'>
@@ -51,7 +56,7 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
                         Chart
                     </motion.button>
                 </div>
-            </div >
+            </div>
 
             <div className='rightMainPage'>
                 <div className='imageBox'>

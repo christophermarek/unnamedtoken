@@ -58,6 +58,7 @@ const Home: React.FC = ({ }) => {
     // Wny you want a token burn
     // It also inflates market cap and makes it appear more valuable. 90% burn inflates market cap 10x.
 
+    // add Google analytics aswell, important to track website and airdrop
 
     const infoBox = [
         ['Download & setup MetaMask or TrustWallet',
@@ -133,11 +134,9 @@ const Home: React.FC = ({ }) => {
             <div>
                 {floatingIcons()}
                 {isPortrait ?
-
                     (
                         <>
                             <StarfieldAnimation numParticles={600} style={{ position: 'fixed', width: '100vw', height: '100vh' }} />
-
                             {topHeader(true)}
                             <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
                             <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket} />
@@ -156,10 +155,8 @@ const Home: React.FC = ({ }) => {
                             <ProjectInfoBox pinkpepe={pinkpepe} features={features} />
                         </>
                     )
-
                 }
             </div>
-
         </div >
     )
 }
