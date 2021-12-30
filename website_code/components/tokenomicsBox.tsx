@@ -39,12 +39,12 @@ export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicke
                                 <p>{tokenTicker}</p>
                             </>
                         }
-                        <>
+                        <div>
                             <p className={'tokenomicsText'}>{tokenomicsInfo[0]}</p>
                             <p className={'tokenomicsText'}>{tokenomicsInfo[1]}</p>
                             <p className={'tokenomicsText'}>{tokenomicsInfo[2]}</p>
                             <p className={'tokenomicsText'}>{tokenomicsInfo[3]}</p>
-                        </>
+                        </div>
 
                     <motion.button className='purplebutton font24 font' whileHover={{ scale: 1.1, color: 'black' }}
                         whileTap={{ scale: 0.9 }}>

@@ -201,6 +201,12 @@ img.icon {
     align-items: center;
 }
 
+@media (orientation: portrait) {
+    .iconContainer {
+        
+    }
+}
+
 .btnContainer {
     width: 100%;
 }
@@ -315,9 +321,16 @@ div#buttonDiv {
     .font22 {
         font-size: medium;
     }
+    .font20{
+        font-size:small;
+    }
 
     .font18 {
         font-size: x-small;
+    }
+
+    .fontmedium{
+        font-size: small;;
     }
 }
 
@@ -375,6 +388,10 @@ div#buttonDiv {
     .nomargin{
         margin-top: 0%;
         margin-bottom: 0%;
+    }
+
+    .projectInfo{
+        margin-bottom: 15%;
     }
 
 }
