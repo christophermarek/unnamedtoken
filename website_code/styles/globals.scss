@@ -16,6 +16,12 @@ body {
     padding: 0;
 }
 
+html,body {
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
 .font {
     font-family: "Space Mono", monospace;
 }
@@ -248,12 +254,37 @@ div#buttonDiv {
     }
 }
 
+
+.buyBoxTitle{
+    font-size: x-large;
+}
+
+.buyBoxText{
+    font-size: medium;
+}
+
+@media (orientation: portrait) {
+
+    .buyBoxTitle{
+        font-size: small;
+    }
+    
+    .buyBoxText{
+        font-size: x-small;
+    }
+    
+}
+
 .ticker {
     margin-top: 0;
 }
 
 .font32 {
     font-size: xx-large;
+}
+
+.fontxlarge{
+    font-size: x-large;
 }
 
 .font24 {
@@ -313,6 +344,7 @@ div#buttonDiv {
     width: 65%;
 }
 
+
 @media (orientation: portrait) {
     .mainPage {
         display: flex;
@@ -337,8 +369,14 @@ div#buttonDiv {
 
     .rightMainPage {
         width: 100%;
-        margin-top: 5%;
+        margin-top: 2%;
     }
+
+    .nomargin{
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
 }
 
 div#rightTextBlurb {

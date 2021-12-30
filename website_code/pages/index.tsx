@@ -41,6 +41,8 @@ const Home: React.FC = ({ }) => {
 
     // when name picked need a site title
 
+    // dust attack to get listed on cmc and can get recognition 
+
     // Add seo head for next
 
     // header onhover shouldnt turn black but grey
@@ -52,6 +54,9 @@ const Home: React.FC = ({ }) => {
     // Can have a max wallet size calculation, showing current stats
 
     // add glowing effect for text and images
+
+    // Wny you want a token burn
+    // It also inflates market cap and makes it appear more valuable. 90% burn inflates market cap 10x.
 
 
     const infoBox = [
@@ -87,6 +92,8 @@ const Home: React.FC = ({ }) => {
     // exchange listings
     // airdrop campaign
     // nft marketplace (hpsoi has one)
+
+    // Check roadmap in notes, make good copy of that with all steps, put into text doc and roadmap for site.
 
     const floatingIcons = () => {
         return (
@@ -129,7 +136,7 @@ const Home: React.FC = ({ }) => {
 
                     (
                         <>
-                            <StarfieldAnimation numParticles={600} style={{ position: 'absolute', width: '100vw', height: '315vh' }} />
+                            <StarfieldAnimation numParticles={600} style={{ position: 'fixed', width: '100vw', height: '100vh' }} />
 
                             {topHeader(true)}
                             <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
@@ -141,7 +148,7 @@ const Home: React.FC = ({ }) => {
                     :
                     (
                         <>
-                            <StarfieldAnimation numParticles={600} style={{ position: 'absolute', width: '100vw', height: '425vh' }} />
+                            <StarfieldAnimation numParticles={600} style={{ position: 'fixed', width: '100vw', height: '100vh' }} />
                             {topHeader(false)}
                             <MainBox tokenName={tokenName} tokenTicker={tokenTicker} src_logo={logo} />
                             <TokenomicsBox tokenName={tokenName} tokenTicker={tokenTicker} astronautAndRocket={astronautAndRocket} />

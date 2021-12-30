@@ -31,8 +31,8 @@ export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) =>
                 <div className='right'>
                     {features.map((entry, index) =>
                         <div key={index} className='featureBox'>
-                            <p className='font22'>{entry[0]}</p>
-                            <p className='font18'>{entry[1]}</p>
+                            <p className='buyBoxTitle'>{entry[0]}</p>
+                            <p className='buyBoxText'>{entry[1]}</p>
                         </div>
                     )}
 

@@ -21,27 +21,24 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
 
             {isPortrait &&
                 <div id='miniInfoBox'>
-                        <p className='name font22'>{tokenName}</p>
-                        <p className='name font22'> ${tokenTicker}</p>
+                        <p className='nomargin font24'>{tokenName}</p>
+                        <p className='nomargin font24'> ${tokenTicker}</p>
                     </div>
             }
 
-            <motion.div className='leftMainPage' initial={{ opacity: 0 }}
-                animate={{
-                    opacity: 1,
-                }}>
+            <div className='leftMainPage'>
                 {!isPortrait &&
                     <div id='miniInfoBox'>
                         <ul className='tokenNameandTicker'>
-                            <li className='name font24'>{tokenName}</li>
-                            <li className='ticker font18'>${tokenTicker}</li>
+                            <li className='name fontxlarge'>{tokenName}</li>
+                            <li className='ticker font24'>${tokenTicker}</li>
                         </ul>
                     </div>
                 }
 
                 <div id='miniTextBlurb'>
-                    <p className='name font18'>{aboutText[0]}</p>
-                    <p className='name font18'>{aboutText[1]}</p>
+                    <p className='name fontmedium'>{aboutText[0]}</p>
+                    <p className='name fontmedium'>{aboutText[1]}</p>
                 </div>
 
                 <div id='buttonDiv'>
@@ -54,7 +51,7 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
                         Chart
                     </motion.button>
                 </div>
-            </motion.div >
+            </div >
 
             <div className='rightMainPage'>
                 <div className='imageBox'>

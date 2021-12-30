@@ -21,10 +21,10 @@ export const HowToBuyBox: React.FC<HowToBuyProps> = ({ infoBox }) => {
                                 (
                                     <>
                                         <div className='buyBox' key={index}>
-                                            <p className='font18'>{entry[0]}</p>
-                                            <p className='font18' >{entry[1]}</p>
+                                            <p className='buyBoxTitle'>{entry[0]}</p>
+                                            <p className='buyBoxText' >{entry[1]}</p>
                                         </div>
-                                        <div className='buyBox' key={index.toString() + ','}>
+                                        <div className='buyBox' key={index*-1}>
                                             <div className='imageBox2'>
                                                 <img src={entry[2]} alt='na' />
                                             </div>
@@ -34,14 +34,14 @@ export const HowToBuyBox: React.FC<HowToBuyProps> = ({ infoBox }) => {
                                 :
                                 (
                                     <>
-                                        <div className='buyBox' key={index.toString() + ','}>
+                                        <div className='buyBox' key={index*-1}>
                                             <div className='imageBox2'>
                                                 <img src={entry[2]} alt='na' />
                                             </div>
                                         </div>
                                         <div className='buyBox' key={index}>
-                                            <p className='font18' >{entry[0]}</p>
-                                            <p className='font18' >{entry[1]}</p>
+                                            <p className='buyBoxTitle' >{entry[0]}</p>
+                                            <p className='buyBoxText' >{entry[1]}</p>
                                         </div>
                                     </>
                                 )
