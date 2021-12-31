@@ -35,8 +35,8 @@ export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicke
                     }}>
                         {!isPortrait &&
                             <>
-                                <p>{tokenName} Tokenomics</p>
-                                <p>{tokenTicker}</p>
+                                <p className="large accentshadow">{tokenName} Tokenomics</p>
+                                <p className="large accentshadow">{tokenTicker}</p>
                             </>
                         }
                         <div>

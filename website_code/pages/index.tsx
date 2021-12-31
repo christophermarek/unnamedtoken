@@ -100,6 +100,7 @@ const Home: React.FC = ({ }) => {
     // add bsc scan link, maybe make it floating?
     // poocoin live chart aswell on the chart link
     // bogged.finance listing
+    // https://www.rugscreen.com and https://www.coinminicap.com.
 
     // coinsniper and tokensniffer listing
 
