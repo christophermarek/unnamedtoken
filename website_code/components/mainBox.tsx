@@ -12,8 +12,8 @@ export const MainBox: React.FC<MainProps> = ({ tokenName, tokenTicker, src_logo 
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     const aboutText = [
-        'InfinityDOT is the first Polkadot reflection token running on Binance Smart Chain. Simply hold tokens and get rewarded automatically in Polkadot on every transaction. With the auto-claim feature, you will receive DOT automatically in your wallet.',
-        'Tax distribution: 11% Holders, 2% BuyBack, 2% Liquidity'
+        `${tokenName} is a secure, community focused reflection token that provides passive income. Hold tokens and get rewarded on every transaction made.`,
+        'Token includes: Anti-whale and Anti-bot mechanics, with a Tax distribution of: 11% Holders, 2% BuyBack, 2% Liquidity'
     ];
 
     return (

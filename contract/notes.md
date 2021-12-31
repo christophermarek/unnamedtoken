@@ -26,3 +26,6 @@ $1.473121
 Reflect token on the Binance Smart Chain.
 A 8% fee is charged on each transaction. 4% is distributed to other token holders and 4% is burned.
 Initial supply: 10,000,000. No more than 100,000 can be traded in 1 transaction.
+
+
+https://www.reddit.com/r/CryptoMoonShots/comments/rs59l9/kino_5_days_old_listed_on_cmc_and_cg_400k_mc_lp/

@@ -60,15 +60,17 @@ const Home: React.FC = ({ }) => {
 
     // add Google analytics aswell, important to track website and airdrop
 
+    // pepe cursor
+
     const infoBox = [
         ['Download & setup MetaMask or TrustWallet',
-            'Download MetaMask (a cryptfo wallet in the form of a browser extension) or TrustWallet (an app for your phone). After that, you will have to add the Binance Smart Chain to your network-list. (Click here for a step-by-step tutorial). they include 3 hyperlinks on their page in this textbox',
+            'Download MetaMask or TrustWallet, and add the Binance Smart Chain to your network-list.',
             metamaskdownload],
         ['Buy and send BNB to Metamask or TrustWallet',
             'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".',
             bnbmetamask],
         ['Head over to our Swap to buy InfinityDOT',
-            'Click here to go to PancakeSwap. Use our contract address to import token: 0x73b96Ac0814EAfF828779De589840d1172aaAa70. FOR MOBILE REMOVE CONTRACT ADDRESS AND ADD TO TOP',
+            'Click here to go to PancakeSwap. Use our contract address to import token: . FOR MOBILE REMOVE CONTRACT ADDRESS AND ADD TO TOP',
             bnbswap],
         ['View InfinityDOT and HODL',
             'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!',
@@ -92,9 +94,16 @@ const Home: React.FC = ({ }) => {
     // - meme contests
     // exchange listings
     // airdrop campaign
-    // nft marketplace (hpsoi has one)
+    // nft marketplace (hpsoi has one) in site, well site will offer nfts, and once those are bought the users can put their own nft's up on the site. roadmap entry
 
     // Check roadmap in notes, make good copy of that with all steps, put into text doc and roadmap for site.
+    // add bsc scan link, maybe make it floating?
+    // poocoin live chart aswell on the chart link
+    // bogged.finance listing
+
+    // coinsniper and tokensniffer listing
+
+    // holder counter on site
 
     const floatingIcons = () => {
         return (

@@ -13,6 +13,9 @@ export const HowToBuyBox: React.FC<HowToBuyProps> = ({ infoBox }) => {
             <div className={'headerBar marginTop1 marginBottom1'}>
                 <p className='font32 font padding1'>How To Buy</p>
             </div>
+            
+            <p className='buyBoxText'>Contract Address: 0x73b96Ac0814EAfF828779De589840d1172aaAa70</p>
+
             <div className='howToBuyData padding2'>
                 <div className='howtobuyContainerContainer'>
                     {infoBox.map((entry, index) =>
