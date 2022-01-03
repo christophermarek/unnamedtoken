@@ -743,6 +743,14 @@ contract SafeMoon is Context, IERC20, Ownable {
         emit Transfer(address(0), _msgSender(), _tTotal);
     }
 
+    function setMaxWalletSize(uint256 walletSize) external onlyOwner() {
+        _maxWalletSize = walletSize;
+    }
+
+    function setMaxTxAmount(uint256 txAmount) external onlyOwner() {
+        _maxTxAmount = txAmount;
+    }
+
     function name() public view returns (string memory) {
         return _name;
     }
