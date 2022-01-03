@@ -93,6 +93,8 @@ const Home: React.FC = ({ }) => {
     // whitepaper
     // - meme contests
     // exchange listings
+    // Whale remove
+    // Renounce ownership
     // airdrop campaign
     // nft marketplace (hpsoi has one) in site, well site will offer nfts, and once those are bought the users can put their own nft's up on the site. roadmap entry
 
@@ -101,6 +103,8 @@ const Home: React.FC = ({ }) => {
     // poocoin live chart aswell on the chart link
     // bogged.finance listing
     // https://www.rugscreen.com and https://www.coinminicap.com.
+
+    // Flooz widget setup with our actual token.
 
     // coinsniper and tokensniffer listing
 

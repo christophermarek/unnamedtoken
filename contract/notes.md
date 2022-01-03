@@ -29,3 +29,13 @@ Initial supply: 10,000,000. No more than 100,000 can be traded in 1 transaction.
 
 
 https://www.reddit.com/r/CryptoMoonShots/comments/rs59l9/kino_5_days_old_listed_on_cmc_and_cg_400k_mc_lp/
+
+
+Swap and lqiuify
+The function works in this way: at each trasnaction a fee is charged and sent to contract balance. 
+When the contract balance reach the numTokensTo… amount, at the next transaction it will call the function 
+swapAndLiquify which divide the contract balance in half. One parte is swapped for wbnb and the second half remain in tokens.
+These two halves are then paired together and added to liqudiity on pancake
+
+https://www.reddit.com/r/CryptoMoonShots/comments/rs59l9/kino_5_days_old_listed_on_cmc_and_cg_400k_mc_lp/
+Kino token

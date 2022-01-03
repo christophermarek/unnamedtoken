@@ -1,26 +1,3 @@
-/**
- *Submitted for verification at BscScan.com on 2021-03-01
-*/
-
-/**
- *Submitted for verification at BscScan.com on 2021-03-01
-*/
-
-/**
-  
-   #BEE
-   
-   #LIQ+#RFI+#SHIB+#DOGE = #BEE
-
-   #SAFEMOON features:
-   3% fee auto add to the liquidity pool to locked forever when selling
-   2% fee auto distribute to all holders
-   I created a black hole so #Bee token will deflate itself in supply with every transaction
-   50% Supply is burned at start.
-   
-
- */
-
 pragma solidity ^0.8.11;
 // SPDX-License-Identifier: Unlicensed
 interface IERC20 {
@@ -697,20 +674,24 @@ contract SafeMoon is Context, IERC20, Ownable {
 
     mapping (address => bool) private _isExcluded;
     address[] private _excluded;
-   
+
+    // t is total supply
+    // r is reflection supply
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 1000000000 * 10**6 * 10**9;
+    // tTotal = total supply of the coin 1,000,000,000,000,000 (10**18 cancels out the 18 decimals)
+    // 10 ^ 15 supply, 1 quadrillion
+    uint256 private _tTotal = 1000000000 * 10**6 * 10**18;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
     string private _name = "SafeMoon";
     string private _symbol = "SAFEMOON";
-    uint8 private _decimals = 9;
+    uint8 private _decimals = 18;
     
-    uint256 public _taxFee = 5;
+    uint256 public _taxFee = 4;
     uint256 private _previousTaxFee = _taxFee;
     
-    uint256 public _liquidityFee = 5;
+    uint256 public _liquidityFee = 4;
     uint256 private _previousLiquidityFee = _liquidityFee;
 
     IUniswapV2Router02 public immutable uniswapV2Router;
@@ -719,8 +700,16 @@ contract SafeMoon is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    uint256 public _maxTxAmount = 5000000 * 10**6 * 10**9;
-    uint256 private numTokensSellToAddToLiquidity = 500000 * 10**6 * 10**9;
+    // Default safemoon amount
+    // uint256 public _maxTxAmount = 5000000 * 10**6 * 10**18;
+    // this is 5% of 50% of the total supply
+    uint256 public _maxTxAmount = 5000000 * 10**6 * 10**18 * 0.05;
+    // now this is the wallet limit which is the same as above.
+    uint256 public _maxWalletSize = 5000000 * 10**6 * 10**18 * 0.05;
+    // and then add a function to modify these values
+
+
+    uint256 private numTokensSellToAddToLiquidity = 500000 * 10**6 * 10**18;
     
     event MinTokensBeforeSwapUpdated(uint256 minTokensBeforeSwap);
     event SwapAndLiquifyEnabledUpdated(bool enabled);
@@ -736,7 +725,7 @@ contract SafeMoon is Context, IERC20, Ownable {
         inSwapAndLiquify = false;
     }
     
-    constructor () public {
+    constructor () {
         _rOwned[_msgSender()] = _rTotal;
         
         IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F);
@@ -1038,6 +1027,12 @@ contract SafeMoon is Context, IERC20, Ownable {
         _tokenTransfer(from,to,amount,takeFee);
     }
 
+    /*
+    The function works in this way: at each trasnaction a fee is charged and sent to contract balance. 
+    When the contract balance reach the numTokensTo… amount, at the next transaction it will call the function 
+    swapAndLiquify which divide the contract balance in half. One parte is swapped for wbnb and the second half remain in tokens.
+    These two halves are then paired together and added to liqudiity on pancake
+    */
     function swapAndLiquify(uint256 contractTokenBalance) private lockTheSwap {
         // split the contract balance into halves
         uint256 half = contractTokenBalance.div(2);
