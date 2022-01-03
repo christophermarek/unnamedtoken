@@ -992,6 +992,15 @@ contract SafeMoon is Context, IERC20, Ownable {
         if(from != owner() && to != owner())
             require(amount <= _maxTxAmount, "Transfer amount exceeds the maxTxAmount.");
 
+        if (from != owner() && to != owner() && to != address(0)) {
+            uint256 contractBalanceRecepient = balanceOf(to);
+            require(
+                contractBalanceRecepient + amount <= _maxWalletSize,
+                "Exceeds maximum wallet amount"
+            );
+        }
+
+
         // is the token balance of this contract address over the min number of
         // tokens that we need to initiate a swap + liquidity lock?
         // also, don't get caught in a circular liquidity event.
