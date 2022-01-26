@@ -1,4 +1,7 @@
 
+HOSTED:
+- https://unnamedtoken.netlify.app/
+
 
 Ok now the focus should really be
 
