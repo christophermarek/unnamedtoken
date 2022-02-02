@@ -25,8 +25,8 @@ const Home: React.FC = ({ }) => {
     // @ts-ignore
     const StarfieldAnimation: any = dynamic(() => import('react-starfield-animation'), { ssr: false });
 
-    const tokenName = 'Placeholder Name';
-    const tokenTicker = 'Placeholder Ticker';
+    const tokenName = 'GALAXY PEPE';
+    const tokenTicker = 'GALAXY';
 
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 

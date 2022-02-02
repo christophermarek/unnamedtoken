@@ -20,12 +20,6 @@ export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) =>
                     <div className='imageBox3'>
                         <img src={pinkpepe} alt='na' />
                     </div>
-                    {isPortrait &&
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
-                            whileTap={{ scale: 0.9 }}>
-                            View Contract
-                        </motion.button>
-                    }
                 </div>
 
                 <div className='right'>
@@ -35,13 +29,6 @@ export const ProjectInfoBox: React.FC<ProjectInfo> = ({ pinkpepe, features }) =>
                             <p className='buyBoxText'>{entry[1]}</p>
                         </div>
                     )}
-
-                    {!isPortrait &&
-                        <motion.button className='purplebutton font24 font' onClick={undefined} whileHover={{ scale: 1.1, color: 'black' }}
-                            whileTap={{ scale: 0.9 }}>
-                            View Contract
-                        </motion.button>
-                    }
                 </div>
             </div>
         </div>
