@@ -30,24 +30,16 @@ const Home: React.FC = ({ }) => {
 
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
-    // Animate when scrolling? like animate the divs when they become in view, no point doing all on page load
-
     //i wonder how important a roadmap page is, but could add probably really quickly.
 
     //unvaxxed sperm has a nice page i can copy too
     // copy their faq too.
 
-    // mobile view is needed aswell.
-
     // when name picked need a site title
 
     // dust attack to get listed on cmc and can get recognition 
 
-    // Add seo head for next
-
     // header onhover shouldnt turn black but grey
-
-    // Add text affect
 
     // I think anti whale is good because I cant buy a lot myself. So i force it to be a community coin with lots of small holders,
     // "by design" because i dont have a large balance to begin buying. anti whale mechanic, but whales could just create more wallets.
@@ -85,7 +77,7 @@ const Home: React.FC = ({ }) => {
             'You don’t need to claim your earned Polkadot. It’s automatically sent to your wallet. Note: in periods of lower volume, this may take longer, but you always receive your Polkadot.']
     ]
 
-    // ROadmap
+    // Roadmap
     // - coinmarketcap listing 25% token burn
     // coingecko listing
     // - contract audit

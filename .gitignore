@@ -27,3 +27,8 @@ stuff.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# contract dir
+contract.sol
+inspiration contract.sol
+notes.md
