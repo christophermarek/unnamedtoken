@@ -662,7 +662,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract SafeMoon is Context, IERC20, Ownable {
+contract GalaxyPepe is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -684,8 +684,8 @@ contract SafeMoon is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "SafeMoon";
-    string private _symbol = "SAFEMOON";
+    string private _name = "Galaxy Pepe";
+    string private _symbol = "GALAXY";
     uint8 private _decimals = 18;
     
     uint256 public _taxFee = 4;
@@ -700,7 +700,6 @@ contract SafeMoon is Context, IERC20, Ownable {
     bool inSwapAndLiquify;
     bool public swapAndLiquifyEnabled = true;
     
-    // Default safemoon amount
     // uint256 public _maxTxAmount = 5000000 * 10**6 * 10**18;
     // this is 5% of 50% of the total supply
     uint256 public _maxTxAmount = 5000000 * 10**6 * 10**18 * 0.05;
