@@ -3,13 +3,9 @@ HOSTED:
 - https://unnamedtoken.netlify.app/
 
 
-Ok now the focus should really be
+Site in:
+- website_code dir
 
 
-- site template (done)
-- Project name
-- Contract done
-- social media done, with links setup
-- website done
-- mobile website
-- test contract
+Smart Contract:
+- contract dir
