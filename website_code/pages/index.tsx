@@ -55,26 +55,29 @@ const Home: React.FC = ({ }) => {
     // pepe cursor
 
     const infoBox = [
-        ['Download & setup MetaMask or TrustWallet',
-            'Download MetaMask or TrustWallet, and add the Binance Smart Chain to your network-list.',
+        ['Download & setup MetaMask',
+            'Download MetaMask and add the Binance Smart Chain to your network-list.',
             metamaskdownload],
-        ['Buy and send BNB to Metamask or TrustWallet',
-            'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. BEP-20 addresses start with a "0x".',
+        ['Buy and send BNB to Metamask',
+            'Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address.',
             bnbmetamask],
-        ['Head over to our Swap to buy InfinityDOT',
-            'Click here to go to PancakeSwap. Use our contract address to import token: . FOR MOBILE REMOVE CONTRACT ADDRESS AND ADD TO TOP',
+        ['Head over to our Swap to buy Galaxy Pepe',
+            'Click here to go to PancakeSwap. Use our contract address to import token.',
             bnbswap],
-        ['View InfinityDOT and HODL',
-            'Swap BNB for InfinityDOT. Now you need to add InfinityDOT contract address to your MetaMask or Trust Wallet to view your InfinityDOT. Lastly, HODL!',
+        ['Add Galaxy Pepe contract to metamask to view balance',
+            'Swap BNB for Galaxy Pepe. Now you need to add Galaxy Pepe contract address to your MetaMask to view your Galaxy Pepe.',
             buyandhold]]
 
     const features = [
-        ['Dividends',
-            '11% of every buy/sell is taken and redistributed to all holders. Hold InfinityDOT tokens and earn Polkadot. A Minimum of 200,000 tokens is required in order to receive rewards.'],
-        ['Buy Back',
-            'Every time the price drops, our team will use the buyback wallet to raise and maintain the currency on an upward trend. When there is no need for buyback, the funds are being used for marketing.'],
-        ['Auto Pay',
-            'You don’t need to claim your earned Polkadot. It’s automatically sent to your wallet. Note: in periods of lower volume, this may take longer, but you always receive your Polkadot.']
+        ['Token Burn',
+            '1 Quadrillion total supply with a 50% token burn on launch.'],
+        ['Anti-Whale',
+            'Max Wallet size of 5% of total supply to prevent whales from manipulating the price.'],
+        ['Auto-Pay',
+            'You don’t need to claim your earned Galaxy Pepe. It’s automatically sent to your wallet.'],
+        ['Team and Project',
+            'The token team is working hard to get the coin listed on major exchanges, and is focusing on an agressive marketing campaign to grow the community']
+
     ]
 
     // Roadmap

@@ -12,10 +12,10 @@ export const TokenomicsBox: React.FC<TokenomicsProps> = ({ tokenName, tokenTicke
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
     const tokenomicsInfo = [
-        'Total supply: 1.000.000.000.000.000',
-        'There is a 15% buy tax.An extra 1% fee is applied to all sales to encourage holding, discourage swing trading and to lessen whale manipulation.At times, our tokenomics may change in response to market conditions.',
-        'The token contract employs a static rewards system.The 15% buy tax is split as follows: 11% is redistributed to holders 2% is used to fuel the liquidity pool 2% is allocated to the Marketing wallet',
-        'Token supply: 50% burned, what if we keep a burn wallet and schedule a burn every week until depleted? 2% team 20% liquidity pool 25% presale 3% marketing'
+        'Total supply: 1.000.000.000.000.000 with 50% burned at launch',
+        'There is a 8% flat tax on all transaction to encourage holding, discourage swing trading and to lessen whale manipulation. At times, our tokenomics may change in response to market conditions.',
+        'The token contract employs a static rewards system.The 8% tax is split as follows: 4% is redistributed to holders and 4% is used to fuel the liquidity pool',
+        'Token distribution: 90% of the tokens go to Liquidity Pool, 2.5% to the dev team, 2.5% for marketing (including airdrops), and 5% for presale.'
     ]
 
     return (
